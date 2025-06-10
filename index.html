@@ -82,33 +82,6 @@
   </footer>
 </body>
 </html>
-from zipfile import ZipFile
-from pathlib import Path
-import shutil
-
-# Create working directories
-base_dir = Path("/mnt/data/sipintar-form")
-images_dir = base_dir / "images"
-base_dir.mkdir(parents=True, exist_ok=True)
-images_dir.mkdir(parents=True, exist_ok=True)
-
-# Map uploaded image files to new filenames
-uploaded_images = {
-    "file-LVaXYvLQmetXboYLToG6mp": "wakatobi1.jpeg",
-    "file-BcbojvnVxBhXayDnz8dhfp": "wakatobi2.jpeg",
-    "file-CYpywXztT3PFEhtL6myJVn": "wakatobi3.jpeg",
-    "file-RmBWAe4TXam22XTqaCAfSb": "ilustrasi-imigrasi.jpeg"
-}
-
-# Copy and rename image files
-src_dir = Path("/mnt/data")
-for file_id, new_name in uploaded_images.items():
-    matches = list(src_dir.glob(f"{file_id}.*"))
-    if matches:
-        shutil.copy(matches[0], images_dir / new_name)
-
-# Create index.html
-index_html = """
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -209,15 +182,4 @@ index_html = """
 
 </body>
 </html>
-"""
 
-with open(base_dir / "index.html", "w") as f:
-    f.write(index_html)
-
-# Create a zip archive
-zip_path = "/mnt/data/sipintar-form.zip"
-with ZipFile(zip_path, 'w') as zipf:
-    for file in base_dir.rglob("*"):
-        zipf.write(file, file.relative_to(base_dir.parent))
-
-zip_path
