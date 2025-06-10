@@ -21,10 +21,19 @@
       padding: 1rem;
       text-align: center;
     }
+    .logo {
+      width: 100px;
+      margin-bottom: 1rem;
+    }
     nav {
       display: flex;
       justify-content: center;
       background-color: #005599;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
     }
     nav a {
       color: white;
@@ -36,31 +45,25 @@
     }
     section {
       padding: 4rem 2rem;
-      min-height: 100vh;
     }
-    .hero {
-      background: url('images/ilustrasi-imigrasi.jpeg') center/cover no-repeat;
-      color: white;
-      text-align: center;
+    .kontak-list {
+      list-style: none;
+      padding: 0;
     }
-    .hero h1 {
-      font-size: 2.5rem;
+    .kontak-list li {
+      display: flex;
+      align-items: center;
       margin-bottom: 1rem;
     }
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
+    .kontak-list .icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 0.5rem;
     }
-    .form-link {
-      background: #f5c518;
-      color: black;
-      padding: 1rem 2rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .form-link:hover {
-      background-color: #e0b417;
+    iframe {
+      border: none;
+      width: 100%;
+      height: 800px;
     }
     footer {
       background: #003366;
@@ -72,37 +75,69 @@
 </head>
 <body>
   <header>
+    <img src="logo-sipintar.png" alt="Logo Imigrasi" class="logo" />
     <h1>SIPINTAR</h1>
     <p>Sistem Pengawasan Orang Asing Terpadu dan Akurat</p>
   </header>
 
   <nav>
-    <a href="#beranda">Beranda</a>
-    <a href="#lapor">Formulir Lapor</a>
-    <a href="#kontak">Kontak</a>
+    <ul>
+      <li><a href="#beranda" class="nav-link">Beranda</a></li>
+      <li><a href="#fitur" class="nav-link">Fitur</a></li>
+      <li><a href="#tentang" class="nav-link">Tentang</a></li>
+      <li><a href="#lapor" class="nav-link">Lapor</a></li>
+      <li><a href="#kontak" class="nav-link">Kontak</a></li>
+    </ul>
   </nav>
 
-  <section id="beranda" class="hero">
-    <h1>Selamat Datang di SIPINTAR</h1>
-    <p>Platform pelaporan dan pengawasan terhadap keberadaan Orang Asing di wilayah Wakatobi.</p>
-    <a href="#lapor" class="form-link">Lapor Sekarang</a>
-  </section>
+  <main>
+    <section id="beranda">
+      <h2>Selamat Datang di SIPINTAR</h2>
+      <p>Sistem untuk pengawasan orang asing secara terpadu dan akurat di wilayah kerja Kantor Imigrasi Kelas III Non TPI Wakatobi.</p>
+    </section>
 
-  <section id="lapor">
-    <h2>Formulir Laporan Orang Asing</h2>
-    <p>Klik tombol di bawah untuk mengisi laporan secara online.</p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRPFsxp4U7IEfNSWahXGAFEGci0rvD1Q3TpQWtbHRmxcBrgg/viewform" class="form-link" target="_blank">Isi Formulir</a>
-  </section>
+    <section id="fitur">
+      <h2>Fitur Utama</h2>
+      <ul>
+        <li>📍 Pelaporan Data Orang Asing</li>
+        <li>🔔 Sistem Notifikasi Otomatis</li>
+        <li>🔒 Keamanan Data Terjamin</li>
+        <li>🛰️ Monitoring Wilayah Real-time</li>
+      </ul>
+    </section>
 
-  <section id="kontak">
-    <h2>Kontak Kami</h2>
-    <p>Email: kanimwakatobi@gmail.com</p>
-    <p>Instagram: <a href="https://instagram.com/imigrasiwakatobi" target="_blank">@imigrasiwakatobi</a></p>
-    <p>Telepon: 0811-4092-377</p>
-  </section>
+    <section id="tentang">
+      <h2>Tentang Kami</h2>
+      <p>Kami dari <strong>Kantor Imigrasi Kelas III Non TPI Wakatobi</strong> berkomitmen dalam melakukan pengawasan dan pengendalian orang asing dengan sistem yang canggih dan akurat.</p>
+    </section>
+
+    <section id="lapor">
+      <h2>Lapor Orang Asing</h2>
+      <p>Gunakan formulir berikut untuk melaporkan keberadaan atau kegiatan orang asing yang mencurigakan di wilayah Anda.</p>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdRPFsxp4U7IEfNSWahXGAFEGci0rvD1Q3TpQWtbHRmxcBrgg/viewform?embedded=true" allowfullscreen></iframe>
+    </section>
+
+    <section id="kontak">
+      <h2>Kontak</h2>
+      <ul class="kontak-list">
+        <li>
+          <img src="icon-email.png" alt="Email" class="icon" />
+          <a href="mailto:kanimwakatobi@gmail.com">kanimwakatobi@gmail.com</a>
+        </li>
+        <li>
+          <img src="icon-instagram.png" alt="Instagram" class="icon" />
+          <a href="https://instagram.com/imigrasiwakatobi" target="_blank">@imigrasiwakatobi</a>
+        </li>
+        <li>
+          <img src="icon-phone.png" alt="Telepon" class="icon" />
+          <a href="tel:+628114092377">0811-4092-377</a>
+        </li>
+      </ul>
+    </section>
+  </main>
 
   <footer>
-    &copy; 2025 Kantor Imigrasi Kelas III Non TPI Wakatobi
+    <p>&copy; 2025 Kantor Imigrasi Kelas III Non TPI Wakatobi</p>
   </footer>
 </body>
 </html>
