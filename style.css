@@ -67,3 +67,20 @@ footer {
   text-align: center;
   padding: 15px 10px;
 }
+
+.kontak-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.kontak-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.kontak-list .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
