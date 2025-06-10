@@ -1,10 +1,69 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f6f8;
+  color: #333;
+  scroll-behavior: smooth;
+}
 
-document.addEventListener("DOMContentLoaded", () => {
-  const links = document.querySelectorAll(".nav-link");
-  links.forEach(link => {
-    link.addEventListener("click", function () {
-      links.forEach(el => el.classList.remove("active"));
-      this.classList.add("active");
-    });
-  });
-});
+header {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.logo {
+  max-height: 80px;
+  margin-bottom: 10px;
+}
+
+nav {
+  background-color: #00509e;
+  text-align: center;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #003366;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+}
