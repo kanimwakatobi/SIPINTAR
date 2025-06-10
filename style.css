@@ -6,6 +6,16 @@ body {
   scroll-behavior: smooth;
 }
 
+.judul-kantor {
+  background-color: #f5f5f5;
+  text-align: center;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #003366;
+  border-bottom: 2px solid #003366;
+}
+
 header {
   background-color: #003366;
   color: white;
