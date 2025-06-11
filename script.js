@@ -1,9 +1,9 @@
-// Highlight active nav link (basic logic if needed dynamically)
-const links = document.querySelectorAll('nav a');
-const path = window.location.pathname.split("/").pop();
-
-links.forEach(link => {
-  if (link.getAttribute("href") === path) {
-    link.classList.add("active");
-  }
+document.addEventListener("DOMContentLoaded", () => {
+  const links = document.querySelectorAll(".nav-link");
+  links.forEach(link => {
+    link.addEventListener("click", function () {
+      links.forEach(el => el.classList.remove("active"));
+      this.classList.add("active");
+    });
+  });
 });
